@@ -1,0 +1,297 @@
+/* Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf2;
+    color: #193b55;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #fffaf2;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px #00000010;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #193b55;
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navbar ul a {
+    color: #193b55;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul a:hover {
+    color: #b51f4b;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 430px;
+    background:
+        linear-gradient(90deg, #102e46e8, #102e4660),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Bhaktapur_Durbar_Square-_Nepal.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 7%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: #ffd77a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-content > p:not(.tagline) {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffd77a;
+    color: #193b55;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+/* General Sections */
+.section {
+    padding: 55px 6%;
+    text-align: center;
+}
+
+.section h2,
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    color: #52687a;
+}
+
+/* Historical Place Cards */
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.history-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #e7dfd3;
+    border-radius: 12px;
+    background-color: #fffdf9;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #193b5518;
+}
+
+.history-card img {
+    width: 45%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    color: #b51f4b;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    margin-bottom: 12px;
+}
+
+.card-content a {
+    display: inline-block;
+    background-color: #b51f4b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card-content a:hover {
+    background-color: #193b55;
+}
+
+/* Tourism Attractions */
+.tourism-section {
+    background-color: #eaf5fb;
+}
+
+.tourism-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tourism-card {
+    background-color: white;
+    padding: 28px 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px #193b550d;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tourism-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px #193b5520;
+}
+
+.attraction-icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.tourism-card h3 {
+    color: #b51f4b;
+    margin-bottom: 10px;
+}
+
+/* About Nepal */
+.about-section {
+    background: linear-gradient(135deg, #193b55, #236a75);
+    color: white;
+    text-align: center;
+    padding: 65px 8%;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+}
+
+.about-section p:not(.tagline) {
+    margin-bottom: 25px;
+}
+
+/* Footer */
+footer {
+    background-color: #102e46;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h2 {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 15px;
+    color: #d5e0e8;
+}
+
+/* Tablet and Mobile Screens */
+@media (max-width: 900px) {
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tourism-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .history-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .history-card img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .tourism-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2,
+    .about-section h2 {
+        font-size: 27px;
+    }
+}
